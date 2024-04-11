@@ -7,6 +7,7 @@ import UserSection from '@/components/task2/home/UserSection';
 import { cn } from '@/lib/utils';
 
 import avatar from '@/public/img/avatar.png';
+import { Suspense } from 'react';
 
 const user = {
   name: 'Hala Ahmed',
@@ -21,7 +22,9 @@ const user = {
 export default function Task2() {
   return (
     <>
-      <Navbar />
+      <Suspense fallback={null}>
+        <Navbar />
+      </Suspense>
       <main className="min-h-screen bg-[#F6F4F5] pb-14">
         <div className="mx-auto grid h-full min-h-screen max-w-7xl grid-cols-1 gap-y-4 px-5 pt-[5rem] md:grid-cols-3 md:gap-4 lg:gap-6 lg:pt-[6.5rem] 2xl:grid-cols-4">
           <div
