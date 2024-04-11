@@ -10,7 +10,7 @@ const controlStyles = {
   focus: 'border-border ring-ring ring-primary-500',
   nonFocus: 'border-border'
 };
-const placeholderStyles = 'text-muted-foreground text-neutral-600 text-sm ml-3';
+const placeholderStyles = 'text-muted-foreground text-gray-600 text-sm ml-3';
 const selectInputStyles = 'text-foreground text-sm ml-3';
 const valueContainerStyles = 'text-foreground text-sm';
 const singleValueStyles = 'ml-3';

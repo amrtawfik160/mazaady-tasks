@@ -2,7 +2,7 @@
 
 import { Category, Property } from '@/@types/database';
 import { SelectedValue, OptionChild } from '@/@types/types';
-import PropertyInput from '@/components/PropertyInput';
+import PropertyInput from '@/components/task1/PropertyInput';
 import { Button } from '@/components/ui/button';
 import { Form, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { SelectComponent } from '@/components/ui/select';

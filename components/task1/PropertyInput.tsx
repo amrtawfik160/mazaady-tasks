@@ -4,7 +4,7 @@ import { Property } from '@/@types/database';
 import { FormControl } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { SelectComponent } from '@/components/ui/select';
-import { Label } from './ui/label';
+import { Label } from '../ui/label';
 import { SelectedValue } from '@/@types/types';
 
 const PropertyInput = ({
