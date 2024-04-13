@@ -25,7 +25,7 @@ const PropertyInput = ({
   selectedValues: any;
 }) => {
   const handlePropertyChange = (data: { value: string; label: string }, property: Property) => {
-    const value = data.value;
+    const value = data?.value;
     const oldProperty = selectedValues.find((item: SelectedValue) => item.key.id === property.id);
 
     // If the old property exists, remove child selections
@@ -59,8 +59,20 @@ const PropertyInput = ({
       onFetchOptionsChild(property.id, selectedChild.id);
     }
 
+    // If the value is empty, remove the property from the selected values
+    if (!value) {
+      setOptionsChild((prev: any) => {
+        const newOptionsChild = { ...prev };
+        delete newOptionsChild[property.id];
+        return newOptionsChild;
+      });
+    }
+
     // Update the selected values
     setSelectedValues((prevValues: SelectedValue[]) => {
+      // If the value is empty, remove the property from the selected values
+      if (!value) return prevValues.filter((item) => item.key.id !== property.id);
+
       const existingIndex = prevValues.findIndex((item) => item.key.id === property.id);
 
       const updatedSelection = {
